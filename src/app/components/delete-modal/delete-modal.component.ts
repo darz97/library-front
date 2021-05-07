@@ -17,8 +17,21 @@ export class DeleteModalComponent implements OnInit {
   deleteBook() {
     this.bookService.deleteByIsbn(this.book.isbn).subscribe(response => {
 
-      location.reload();
-    });
+      const option = confirm(response.message[0]);
+      if (option === true) {
+        location.reload();
+      } else {
+        location.reload();
+      }
+    },(err) => {
+      const option = confirm(err.error.message[0]);
+      if (option === true) {
+        location.reload();
+      } else {
+        location.reload();
+      }
+    }
+    );
 
   }
 
