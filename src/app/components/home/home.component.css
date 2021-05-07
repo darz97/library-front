@@ -1,0 +1,33 @@
+header {
+    text-align: center;
+    background-color: black;
+}
+
+#img-library {
+    height: 200px;
+}
+
+.menu {
+    margin-top: 20px;
+}
+
+.card-books {
+    display: grid;
+    border-radius: 30px;
+    background-color: white;
+    height: 90%;
+    width: 90%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: grey;
+}
+
+.imagen-carta {
+    height: 60px;
+    width: 60px;
+}
+
+.icon {
+    text-align: center;
+    margin: 10px 10px 0px;
+}

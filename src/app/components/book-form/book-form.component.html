@@ -1,0 +1,23 @@
+<header>
+    <img id="img-library" src="../assets/libreria.svg" alt="Library">
+</header>
+<div class="container-fluid ">
+    <form class="row book-form" (ngSubmit)="insert()" #bookForm="ngForm">
+        <div class="form-field col-sm-6 col-12">
+            <input type="text" class="input-text form-control form-control-lg" id="name" placeholder="Name" name="name" [(ngModel)]="book.name" #name="ngModel" required />
+        </div>
+        <div class="form-field col-sm-6 col-12">
+            <input type="text" class="input-text form-control form-control-lg" id="author" placeholder="Author" name="author" [(ngModel)]="book.author" #author="ngModel" required />
+        </div>
+        <div class=" form-field col-sm-6 col-12">
+            <input type="text" class=" input-text form-control form-control-lg" id="publisher" placeholder="Publisher" name="publisher" [(ngModel)]="book.publisher" #publisher="ngModel" required />
+
+        </div>
+        <div class="form-field col-sm-6 col-12">
+            <input type="text" class="input-text form-control form-control-lg" id="genre" placeholder="Genre" name="genre" [(ngModel)]="book.genre" minlength="4" #genre="ngModel" required />
+        </div>
+        <div class="d-grid gap-2 col-sm-6 col-12" id="button">
+            <button type="submit" class="btn btn-primary btn-lg">Save</button>
+        </div>
+    </form>
+</div>

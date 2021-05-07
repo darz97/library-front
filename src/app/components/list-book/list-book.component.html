@@ -1,0 +1,38 @@
+<header>
+    <img id="img-library" src="../assets/libreria.svg" alt="Library" />
+
+    <div class="row">
+        <div class="col-sm-8 col-12 column">
+            <div class="input-group rounded">
+                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" (input)="search($event)" />
+            </div>
+        </div>
+        <div class="col-sm-4 col-12 column">
+
+            <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" [(ngModel)]="publisher" (change)="filterByPublisher($event.target)">
+              <option selected >All books</option>
+              <option *ngFor="let book of booksByPublisher; let i = index" [value]="book.publisher">{{book.publisher}}</option>
+      </select>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="container menu">
+        <div *ngFor="let book of books | bookPipe: textSearch:'name'" class="card card-books" data-bs-toggle="modal" data-bs-target="#modalInfoBook" (click)="deleteOrShowInfo(book)">
+            <div class="icon">
+                <div class="d-flex flex-row bd-highlight mb-3">
+                    <img src="../../../assets/libro.svg" class="card-img-top imagen-carta" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">{{ book.name }}</h5>
+                    </div>
+
+                    <img type="button" src="../../../assets/trash.svg" class="card-img-top imagen-delete" alt="..." data-bs-toggle="modal" data-bs-target="#modalDeleteBook" (click)="deleteOrShowInfo(book)" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<app-book-modal [book]="book"></app-book-modal>
+<app-delete-modal [book]="book"></app-delete-modal>

@@ -1,0 +1,23 @@
+<div class="modal fade" id="modalDeleteBook">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">{{book.name}}</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                ¿Do you really want to delete this book's information?
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="deleteBook()">
+        Delete
+      </button>
+            </div>
+        </div>
+    </div>
+</div>

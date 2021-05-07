@@ -1,0 +1,36 @@
+header {
+    text-align: center;
+    background-color: black;
+}
+
+#img-library {
+    height: 100px;
+}
+
+.card-books {
+    margin-top: 3px;
+    display: grid;
+    border-radius: 30px;
+    background-color: white;
+    height: 98.8%;
+    width: 98.8%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: grey;
+}
+
+.imagen-carta {
+    height: 60px;
+    width: 60px;
+}
+
+.icon {
+    margin: 10px 10px 0px;
+}
+
+.imagen-delete {
+    height: 30px;
+    width: 30px;
+    margin-top: 20px;
+    margin-right: 10px;
+}

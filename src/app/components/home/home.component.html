@@ -1,0 +1,33 @@
+<header>
+    <img id="img-library" src="../assets/libreria.svg" alt="Library">
+</header>
+
+<body>
+    <div class="container menu">
+        <div class="row gy-5">
+            <div class="col-6">
+                <div class="card card-books" [routerLink]="['/book-form']">
+                    <div class="icon">
+                        <img src="../assets/book-add.svg" class="card-img-top imagen-carta" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Insert</h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-6 ">
+                <div class="card card-books" [routerLink]="['/list-book']">
+                    <div class="icon ">
+                        <img src="../assets/libro.svg " class="card-img-top imagen-carta " alt="... ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">List</h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
